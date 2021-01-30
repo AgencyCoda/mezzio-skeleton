@@ -15,5 +15,5 @@ env_variables:
   DB_UNIXSOCKET: "/cloudsql/coinsport:asia-northeast3:coinsport-db"
   DB_DATABASE: "coinsport"
   DB_USERNAME: "root"
-  DB_PASSWORD: "bDkfsGPtirAfr3Ej"
+  DB_PASSWORD: "password"
   API_URL: "https://coinsport.du.r.appspot.com"
