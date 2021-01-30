@@ -13,6 +13,7 @@
         "psr-11",
         "psr-15"
     ],
+    "minimum-stability": "dev",
     "homepage": "https://mezzio.dev",
     "support": {
         "docs": "https://docs.mezzio.dev/mezzio/",
