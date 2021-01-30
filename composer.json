@@ -43,6 +43,7 @@
         "agencycoda/mia-auth-mezzio": "dev-main",
         "agencycoda/mia-mail-mezzio": "dev-main",
         "agencycoda/mia-installer-mezzio": "dev-main",
+        "mezzio/mezzio-cors": "^1.0",
         "composer/package-versions-deprecated": "^1.10.99",
         "laminas/laminas-component-installer": "^2.1.2",
         "laminas/laminas-config-aggregator": "^1.2",
@@ -50,7 +51,6 @@
         "laminas/laminas-stdlib": "^3.2.1",
         "laminas/laminas-zendframework-bridge": "^1.0",
         "mezzio/mezzio": "^3.2.1",
-        "mezzio/mezzio-cors": "^1.0",
         "mezzio/mezzio-helpers": "^5.3"
     },
     "require-dev": {
