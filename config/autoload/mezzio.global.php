@@ -22,4 +22,12 @@ return [
             'template_error' => 'error::error',
         ],
     ],
+
+    'dependencies' => [
+        'invokables' => [
+        ],
+        'factories'  => [
+            \Mezzio\Middleware\ErrorResponseGenerator::class       => \Mia\Core\Middleware\StackDriverErrorMiddleware::class
+        ],
+    ],
 ];

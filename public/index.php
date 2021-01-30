@@ -17,6 +17,9 @@ require 'vendor/autoload.php';
     /** @var \Psr\Container\ContainerInterface $container */
     $container = require 'config/container.php';
 
+    // Inicializar Database
+    Mia\Database\Eloquent::install($container);
+
     /** @var \Mezzio\Application $app */
     $app = $container->get(\Mezzio\Application::class);
     $factory = $container->get(\Mezzio\MiddlewareFactory::class);

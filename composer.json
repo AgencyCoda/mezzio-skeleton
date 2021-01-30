@@ -37,6 +37,11 @@
     },
     "require": {
         "php": "^7.3",
+        "agencycoda/mia-core-mezzio": "dev-main",
+        "agencycoda/mia-eloquent-mezzio": "dev-main",
+        "agencycoda/mia-auth-mezzio": "dev-main",
+        "agencycoda/mia-mail-mezzio": "dev-main",
+        "agencycoda/mia-installer-mezzio": "dev-main",
         "composer/package-versions-deprecated": "^1.10.99",
         "laminas/laminas-component-installer": "^2.1.2",
         "laminas/laminas-config-aggregator": "^1.2",
@@ -113,5 +118,27 @@
         "serve": "php -S 0.0.0.0:8080 -t public/",
         "test": "phpunit --colors=always",
         "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
-    }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/agencycoda/mia-eloquent-mezzio.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/agencycoda/mia-core-mezzio.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/agencycoda/mia-auth-mezzio.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/agencycoda/mia-mail-mezzio.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/agencycoda/mia-installer-mezzio.git"
+        }
+    ]
 }

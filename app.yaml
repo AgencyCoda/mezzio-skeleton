@@ -1,0 +1,19 @@
+runtime: php73
+
+handlers:
+# Serve a directory as a static resource.
+- url: /swagger
+  static_dir: public/swagger
+
+- url: /.*
+  script: auto
+  secure: always
+  redirect_http_response_code: 301
+  
+env_variables:
+  DB_HOST: ""
+  DB_UNIXSOCKET: "/cloudsql/coinsport:asia-northeast3:coinsport-db"
+  DB_DATABASE: "coinsport"
+  DB_USERNAME: "root"
+  DB_PASSWORD: "bDkfsGPtirAfr3Ej"
+  API_URL: "https://coinsport.du.r.appspot.com"
