@@ -38,6 +38,11 @@
     },
     "require": {
         "php": "^7.3",
+        "agencycoda/mia-core-mezzio": "dev-main",
+        "agencycoda/mia-eloquent-mezzio": "dev-main",
+        "agencycoda/mia-auth-mezzio": "dev-main",
+        "agencycoda/mia-mail-mezzio": "dev-main",
+        "agencycoda/mia-installer-mezzio": "dev-main",
         "composer/package-versions-deprecated": "^1.10.99",
         "laminas/laminas-component-installer": "^2.1.2",
         "laminas/laminas-config-aggregator": "^1.2",
