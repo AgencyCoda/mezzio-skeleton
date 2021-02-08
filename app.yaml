@@ -17,3 +17,8 @@ env_variables:
   DB_USERNAME: "root"
   DB_PASSWORD: "password"
   API_URL: "https://coinsport.du.r.appspot.com"
+  SENDGRID_API_KEY: "KEY"
+  SENDGRID_FROM: "info@coinposrt.com"
+  SENDGRID_NAME: "CoinSport"
+  SENDGRID_REPLY_TO: "info@coinsport.com"
+  SENDGRID_BASE_URL: "https://coinsport.web.app/"
