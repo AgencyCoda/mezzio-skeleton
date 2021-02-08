@@ -1,3 +1,7 @@
+## Generar documentación con Swagger
+```bash
+./vendor/bin/openapi --format json --output public/swagger/swagger.json src config vendor/agencycoda
+```
 # Mezzio Skeleton and Installer
 
 [![Build Status](https://travis-ci.com/mezzio/mezzio-skeleton.svg?branch=master)](https://travis-ci.com/mezzio/mezzio-skeleton)
