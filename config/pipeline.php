@@ -14,6 +14,7 @@ use Mezzio\Router\Middleware\ImplicitOptionsMiddleware;
 use Mezzio\Router\Middleware\MethodNotAllowedMiddleware;
 use Mezzio\Router\Middleware\RouteMiddleware;
 use Psr\Container\ContainerInterface;
+use Mezzio\Cors\Middleware\CorsMiddleware;
 
 /**
  * Setup middleware pipeline:
@@ -24,6 +25,7 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
     $app->pipe(ErrorHandler::class);
     $app->pipe(ServerUrlMiddleware::class);
     $app->pipe(Mezzio\Helper\BodyParams\BodyParamsMiddleware::class);
+    $app->pipe(CorsMiddleware::class);
 
     // Pipe more middleware here that you want to execute on every request:
     // - bootstrapping
