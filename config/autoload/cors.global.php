@@ -11,6 +11,6 @@ return [
         'allowed_max_age' => '600', // 10 minutes
         'credentials_allowed' => true, // Allow cookies
         'exposed_headers' => ['X-Custom-Header', 'Etag'], // Tell client that the API will always return this header
-        //'allowed_methods'
+        'allowed_methods' => ["GET", "POST", "PUT", "PATCH", "DELETE"]
     ],
 ];
