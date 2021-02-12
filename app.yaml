@@ -14,6 +14,7 @@ handlers:
   redirect_http_response_code: 301
   
 env_variables:
+  API_KEY: ""
   DB_HOST: ""
   DB_UNIXSOCKET: "/cloudsql/coinsport:asia-northeast3:coinsport-db"
   DB_DATABASE: "coinsport"

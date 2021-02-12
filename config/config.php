@@ -27,6 +27,9 @@ $aggregator = new ConfigAggregator([
         ? \Mezzio\Swoole\ConfigProvider::class
         : function(): array { return[]; },
 
+    // MIA Auth Library
+    \Mia\Auth\ConfigProvider::class,
+
     // MIA Email Library
     \Mia\Mail\ConfigProvider::class,
 
