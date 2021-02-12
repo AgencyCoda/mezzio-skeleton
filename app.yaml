@@ -5,6 +5,9 @@ handlers:
 - url: /swagger
   static_dir: public/swagger
 
+- url: /mia-mail
+  static_dir: public/mia-mail
+
 - url: /.*
   script: auto
   secure: always
