@@ -14,6 +14,15 @@ namespace App;
  *   )
  * )
  * 
+ * @OA\SecurityScheme(
+ *   securityScheme="bearerAuth",
+ *   type="http",
+ *   in="header",
+ *   scheme="bearer",
+ *   name="Authorization",
+ *   bearerFormat="JWT"
+ * )
+ * 
  * The configuration provider for the App module
  *
  * @see https://docs.laminas.dev/laminas-component-installer/
