@@ -5,6 +5,15 @@ declare(strict_types=1);
 namespace App;
 
 /**
+ * 
+ * @OA\Info(
+ *  title="App API",
+ *  version="0.1",
+ *  @OA\Contact(
+ *     email="matias@agencycoda.com"
+ *   )
+ * )
+ * 
  * The configuration provider for the App module
  *
  * @see https://docs.laminas.dev/laminas-component-installer/
