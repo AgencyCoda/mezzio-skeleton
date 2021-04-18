@@ -6,6 +6,10 @@ use Mezzio\Application;
 use Mezzio\MiddlewareFactory;
 use Psr\Container\ContainerInterface;
 
+use Mia\Auth\Model\MIAUser;
+use Mia\Auth\Handler\RegisterHandler;
+use Mia\Auth\Handler\Social\GoogleSignInHandler;
+
 /**
  * FastRoute route configuration
  *
@@ -48,7 +52,7 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
     $app->route('/mia-auth/change-password-recovery', [Mia\Auth\Handler\MiaPasswordRecoveryHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia_auth.change-password-recovery');
     $app->route('/mia-auth/me', [\Mia\Auth\Handler\AuthHandler::class, Mia\Auth\Handler\FetchProfileHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia_auth.me');
     
-    //$app->route('/mia-auth/google-signin', [Mia\Auth\Handler\GoogleSignInHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia_auth.google-signin');
+    $app->route('/mia-auth/login-with-google', [GoogleSignInHandler::class], ['POST', 'OPTIONS', 'HEAD'], 'mia_auth.login-with-gogle');
     //$app->route('/mia-auth/apple-signin', [Mia\Auth\Handler\AppleSignInHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia_auth.apple-signin');
     $app->route('/mia-auth/register-device', [\Mia\Auth\Handler\AuthHandler::class, Mia\Auth\Handler\RegisterDeviceHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia_auth.register-device');
 
@@ -66,4 +70,5 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
     /** USERS */
     $app->route('/user/list', [\Mia\Auth\Handler\AuthHandler::class, new \Mia\Auth\Middleware\MiaRoleAuthMiddleware([MIAUser::ROLE_ADMIN]), \Mia\Auth\Handler\User\ListHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'user.list');
     $app->route('/user/block', [\Mia\Auth\Handler\AuthHandler::class, new \Mia\Auth\Middleware\MiaRoleAuthMiddleware([MIAUser::ROLE_ADMIN]), \Mia\Auth\Handler\User\BlockHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'user.block');
+    $app->route('/user/save', [\Mia\Auth\Handler\AuthHandler::class, new \Mia\Auth\Middleware\MiaRoleAuthMiddleware([MIAUser::ROLE_ADMIN]), \Mia\Auth\Handler\User\SaveHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'user.save');
 };
