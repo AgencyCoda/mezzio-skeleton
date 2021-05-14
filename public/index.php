@@ -17,6 +17,9 @@ require 'vendor/autoload.php';
     /** @var \Psr\Container\ContainerInterface $container */
     $container = require 'config/container.php';
 
+    // Init MIA Core
+    Mia\Core\Core::install($container);
+
     // Inicializar Database
     Mia\Database\Eloquent::install($container);
 
