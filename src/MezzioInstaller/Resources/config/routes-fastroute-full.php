@@ -56,7 +56,10 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
     //$app->route('/mia-auth/apple-signin', [Mia\Auth\Handler\AppleSignInHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia_auth.apple-signin');
     $app->route('/mia-auth/register-device', [\Mia\Auth\Handler\AuthHandler::class, Mia\Auth\Handler\RegisterDeviceHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia_auth.register-device');
 
-    $app->route('/mia-auth/role/list', [Mia\Auth\Handler\Role\ListHandler::class], ['GET', 'OPTIONS', 'HEAD'], 'mia_auth.role-list');
+    /** ROLES AND PERMISSIONS  */
+    $app->route('/mia-auth/role/list', [Mia\Auth\Handler\Role\ListHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia_auth.role-list');
+    $app->route('/mia-auth/role/all', [Mia\Auth\Handler\Role\AllHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia_auth.role-all');
+    $app->route('/mia-auth/role/access', [\Mia\Auth\Handler\AuthHandler::class, Mia\Auth\Handler\Role\AccessHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia_auth.role-access');
 
     /** EMAILs Templates  */
     $app->route('/mia-mail-admin/list', [\Mia\Mail\Handler\FetchTemplatesHandler::class], ['GET', 'POST', 'OPTIONS', 'HEAD'], 'mia-mail.list');
