@@ -119,7 +119,12 @@
         ],
         "serve": "php -S 0.0.0.0:8080 -t public/",
         "test": "phpunit --colors=always",
-        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+        "coda-migrate": "coda-migration migrate",
+        "coda-make-migrate": "coda-migration make",
+        "coda-make-seeder": "coda-migration make:seeder",
+        "coda-seed": "coda-migration db:seed",
+        "coda-install": "coda-install"
     },
     "repositories": [
         {
